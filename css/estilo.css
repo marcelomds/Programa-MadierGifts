@@ -1,0 +1,66 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: #FFCFC6;
+    font: normal 15pt Arial;
+    height:100%;
+    display: block;
+}
+
+img {
+    margin-left: 80px;
+}
+
+section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 3px 3px 10px rgb(88, 85, 85);
+}
+
+#cm {
+    width: 155px;
+    color: rgb(148, 60, 60);
+}
+
+footer {
+    color: rgb(148, 60, 60);
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#btCalcular {
+    background-color: rgb(211, 93, 93);
+    height: 60px;
+}
+
+#btCalcular:hover {
+    background-color: rgb(148, 60, 60);
+}
+
+#btLimpar {
+    height: 40px;
+    line-height: 16px;
+    background-color: rgb(135, 136, 136);
+    color: #fff;
+}
+
+#btLimpar:hover {
+    background-color: rgb(83, 83, 83);
+}
+
+#outValor {
+    display: none;
+
+}
+
+#valor {
+    background-color: #FFCFC6;
+}
+

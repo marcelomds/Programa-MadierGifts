@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Madier Gifts</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <img src="img/logo.jpeg" alt="Logo madiergifts">
+
+            <div id="dados">
+                <form class="form-group row mt-4">
+                    <div class="input-group mb-2 ml-3 mr-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="cm">Largura (cm)</div>
+                        </div>
+                        <input type="text" class="form-control" id="inLargura" placeholder="Digite o valor">
+                    </div>
+                    <div class="input-group mb-2 ml-3 mr-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="cm">Comprimento (cm)</div>
+                        </div>
+                        <input type="text" class="form-control" id="inComprimento"
+                            placeholder="Digite o valor">
+                    </div>
+                    <div class="input-group mb-2 ml-3 mr-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="cm">Altura (cm)</div>
+                        </div>
+                        <input type="text" class="form-control" id="inAltura" placeholder="Digite o valor">
+                    </div>
+
+                    <select class="custom-select ml-3 mt-3 mr-3" id="inTipocx">
+                        <option selected>-- TIPO DE CAIXA --</option>
+                        <option value="1">MADEIRA</option>
+                        <option value="2">ACRÍLICO</option>
+                        <option value="3">PORTA-JOIAS</option>
+                        <option value="4">MADEIRA</option>
+                        <option value="5">ACRÍLICO</option>
+                        <option value="6">PORTA-JOIAS</option>
+                    </select>
+
+                    <button type="button" id="btCalcular"
+                        class="btn btn-secondary btn-lg btn-block mt-3 ml-3 mr-3">Calcular</button>
+                    <button type="button" id="btLimpar" 
+                    class="btn btn-secondary btn-lg btn-block mt-2 ml-3 mr-3">Limpar Campos</button>
+
+            </div>
+            </form>
+            <div class="alert alert-danger text-center" id="valor" role="alert">
+                <h4 class="alert-heading"></h4>
+                <hr>
+                <br/>
+                <p id="outValor"></p>
+            </div>
+    </div>
+    </section>
+    <footer>
+        <p>@madiergifts</p>
+    </footer>
+    <script src="js/script.js"></script>
+    </div>
+</body>
+
+</html>

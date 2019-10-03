@@ -41,6 +41,9 @@ calcularValor = () => {
         return;
     }
 
+    //Criando referencia com o tipo de caixa do select
+    let select = document.getElementById('inTipocx');
+
     //Mostra o valor total a ser Pago
     outValor.innerHTML = ()
 }

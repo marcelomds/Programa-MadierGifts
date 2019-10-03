@@ -48,6 +48,15 @@ calcularValor = () => {
     outValor.innerHTML = ()
 }
 
+$('#inTipocx').change(function(){
+    // Aqui você tem o value selecionado assim que o usuário muda o option
+    var caixa = $(this).val();
+    if (caixa == 1) {
+        alert('1111111111')
+    }
+})
+
+
 // Cria referência ao elemento btCalcular e registra evento assossiado a calcular Valor R$
 let resultado = document.getElementById('btCalcular').addEventListener('click', (calcularValor))
 

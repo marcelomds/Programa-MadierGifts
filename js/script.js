@@ -4,7 +4,7 @@ limparCampos = ()=> {
     document.getElementById('inComprimento').value = '';
     document.getElementById('inAltura').value = '';
     document.getElementById('outValor').value = '';
-    //window.location = ''
+    window.location = ''
     // Posiciona o cursor no campo 'Largura'
     document.getElementById('inLargura').focus();
 }
@@ -43,30 +43,13 @@ calcularValor = () => {
 
     //Criando referencia com o tipo de caixa do select
     let select = document.getElementById('inTipocx');
-
-    //Mostra o valor total a ser Pago
-    outValor.innerHTML = ()
-}
-
-$('#inTipocx').change(function(){
-    // Aqui você tem o value selecionado assim que o usuário muda o option
-    var caixa = $(this).val();
-    if (caixa == 1) {
-        alert('1111111111')
+    if (select.value = 4) { outValor.innerHTML = (`${largura + comprimento + altura}`);
     }
-})
+}
 
 
 // Cria referência ao elemento btCalcular e registra evento assossiado a calcular Valor R$
 let resultado = document.getElementById('btCalcular').addEventListener('click', (calcularValor))
-
-
-
-
-
-
-
-
 
 // Cria referência ao elemento btLimpar e registra evento assossiado a limpar campos
 let limpar = document.getElementById('btLimpar').addEventListener('click', (limparCampos));

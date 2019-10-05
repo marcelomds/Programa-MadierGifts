@@ -4,7 +4,8 @@ limparCampos = ()=> {
     document.getElementById('inComprimento').value = '';
     document.getElementById('inAltura').value = '';
     document.getElementById('outValor').value = '';
-    window.location = ''
+    outValor.innerHTML = '';
+    let select = document.getElementById('inTipocx').value = 'selected';
     // Posiciona o cursor no campo 'Largura'
     document.getElementById('inLargura').focus();
 }
@@ -21,19 +22,21 @@ calcularValor = () => {
     let comprimento = Number(inComprimento.value);
     let altura = Number(inAltura.value);
 
-    // Verificar se o campo compra é vazio (0) ou NaN;
+    // Verificar se o campo largura é vazio (0) ou NaN;
     if (largura == 0 || isNaN(largura)) {
         alert('Por favor, digite um valor real para a largura da caixa!');
         inLargura.value = '';
         inLargura.focus();
         return;
     }
+    // Verificar se o campo comprimento é vazio (0) ou NaN;
     if (comprimento == 0 || isNaN(comprimento)) {
         alert('Por favor, digite um valor real para o comprimento da caixa!');
         inComprimento.value = '';
         inComprimento.focus();
         return;
     }
+    // Verificar se o campo altura é vazio (0) ou NaN;
     if (altura == 0 || isNaN(altura)) {
         alert('Por favor, digite um valor real para a altura da caixa!');
         inAltura.value = '';
@@ -43,7 +46,8 @@ calcularValor = () => {
 
     //Criando referencia com o tipo de caixa do select
     let select = document.getElementById('inTipocx');
-    if (select.value = 4) { outValor.innerHTML = (`${largura + comprimento + altura}`);
+    if (select.value = 4) { 
+        outValor.innerHTML = (`Valor R$: ${(largura + comprimento + altura).toFixed(2).fontcolor('green')}`);
     }
 }
 

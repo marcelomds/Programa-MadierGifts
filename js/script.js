@@ -5,7 +5,7 @@ limparCampos = ()=> {
     document.getElementById('inAltura').value = '';
     document.getElementById('outValor').value = '';
     outValor.innerHTML = '';
-    let select = document.getElementById('inTipocx').value = 'selected';
+    let select = document.getElementById('inTipocx').value = '';
     // Posiciona o cursor no campo 'Largura'
     document.getElementById('inLargura').focus();
 }

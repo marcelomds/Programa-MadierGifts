@@ -1,5 +1,5 @@
 //Limpando Campos e recarregando a página
-limparCampos = ()=> {
+limparCampos = () => {
     document.getElementById('inLargura').value = '';
     document.getElementById('inComprimento').value = '';
     document.getElementById('inAltura').value = '';
@@ -10,7 +10,7 @@ limparCampos = ()=> {
     document.getElementById('inLargura').focus();
 }
 
-calcularValor = () => {
+$('#btCalcular').click(function () {
     //Receber as medidas da caixa
     let inLargura = document.getElementById('inLargura');
     let inComprimento = document.getElementById('inComprimento');
@@ -20,6 +20,7 @@ calcularValor = () => {
     let largura = Number(inLargura.value);
     let comprimento = Number(inComprimento.value);
     let altura = Number(inAltura.value);
+    let outValor = document.getElementById('outValor');
 
     // Verificar se o campo largura é vazio (0) ou NaN;
     if (largura == 0 || isNaN(largura)) {
@@ -42,44 +43,28 @@ calcularValor = () => {
         inAltura.focus();
         return;
     }
-}
-
-$('#btCalcular').click(function() {
-    //Receber as medidas da caixa
-    let inLargura = document.getElementById('inLargura');
-    let inComprimento = document.getElementById('inComprimento');
-    let inAltura = document.getElementById('inAltura');
-
-    //Transformar os dados em números
-    let largura = Number(inLargura.value);
-    let comprimento = Number(inComprimento.value);
-    let altura = Number(inAltura.value);
-    let outValor = document.getElementById('outValor');
 
     let opcaoCaixa = $('#inTipocx :checked').val();
-    
-    if ( opcaoCaixa == '' ) {
+
+    if (opcaoCaixa == '') {
         alert('Por favor, escolha o tipo de caixa');
     }
-    if ( opcaoCaixa == 'cx1' ) {
+    if (opcaoCaixa == 'cx1') {
         outValor.innerHTML = ('BASE MADEIRA - TAMPA ACRÍLICO');
     }
-    if ( opcaoCaixa == 'cx2' ) {
+    if (opcaoCaixa == 'cx2') {
         outValor.innerHTML = ('CARTONAGEM');
     }
-    if ( opcaoCaixa == 'cx3' ) {
+    if (opcaoCaixa == 'cx3') {
         outValor.innerHTML = ('MADEIRA - TAMPA ACRÍLICO CURTA');
     }
-    if ( opcaoCaixa == 'cx4' ) {
+    if (opcaoCaixa == 'cx4') {
         outValor.innerHTML = (`Valor R$: ${(largura + comprimento + altura).toFixed(2).fontcolor('green')}`);
     }
-    if ( opcaoCaixa == 'cx5' ) {
+    if (opcaoCaixa == 'cx5') {
         outValor.innerHTML = ('TODA ACRÍLICO');
     }
 })
-
-// Cria referência ao elemento btCalcular e registra evento assossiado a calcular Valor R$
-let resultado = document.getElementById('btCalcular').addEventListener('click', (calcularValor))
 
 
 // Cria referência ao elemento btLimpar e registra evento assossiado a limpar campos

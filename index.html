@@ -16,7 +16,7 @@
             <img src="img/logo.jpeg" alt="Logo madiergifts">
 
             <div id="dados">
-                <form class="form-group row mt-4">
+                <form class="form-group row mt-3">
                     <div class="input-group mb-2 ml-3 mr-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text" id="cm">Largura (cm)</div>
@@ -27,8 +27,7 @@
                         <div class="input-group-prepend">
                             <div class="input-group-text" id="cm">Comprimento (cm)</div>
                         </div>
-                        <input type="text" class="form-control" id="inComprimento"
-                            placeholder="Digite o tamanho">
+                        <input type="text" class="form-control" id="inComprimento" placeholder="Digite o tamanho">
                     </div>
                     <div class="input-group mb-2 ml-3 mr-3">
                         <div class="input-group-prepend">
@@ -37,7 +36,7 @@
                         <input type="text" class="form-control" id="inAltura" placeholder="Digite o tamanho">
                     </div>
 
-                    <select class="custom-select ml-3 mt-3 mr-3" id="inTipocx">
+                    <select class="custom-select ml-3 mt-1 mr-3" id="inTipocx">
                         <option value="" selected disabled>-- TIPO DE CAIXA --</option>
                         <option value="cx1">BASE MADEIRA - TAMPA ACRÍLICO</option>
                         <option value="cx2">CARTONAGEM</option>
@@ -46,10 +45,28 @@
                         <option value="cx5">TODA ACRÍLICO</option>
                     </select>
 
+                    <div class="form-inline">
+                        <div class="col-auto">
+                            <div class="form-check">
+                                    <label class="addQtd" for="qtdCaixas">
+                                <input class="form-check-input ml-4" name="addCx" value="addQtd" type="checkbox" id="qtdCaixas" >
+                                
+                                    Adicionar Quantidades
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control mt-2" id="totalCaixas"
+                                placeholder="Total de caixas" disabled="disabled">
+                        </div>
+
+
+                    </div>
+
                     <button type="button" id="btCalcular"
-                        class="btn btn-secondary btn-lg btn-block mt-3 ml-3 mr-3">Calcular Caixa</button>
-                    <button type="button" id="btLimpar" 
-                    class="btn btn-secondary btn-lg btn-block mt-2 ml-3 mr-3">Limpar Campos</button>
+                        class="btn btn-secondary btn-lg btn-block mt-2 ml-3 mr-3">Calcular Caixa</button>
+                    <button type="button" id="btLimpar" class="btn btn-secondary btn-lg btn-block mt-2 ml-3 mr-3">Limpar
+                        Campos</button>
 
             </div>
             </form>

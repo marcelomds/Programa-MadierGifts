@@ -60,3 +60,12 @@ footer {
     background-color: #FFCFC6;
 }
 
+#totalCaixas {
+    width: 223px;
+}
+
+.addQtd {
+    color: rgb(148, 60, 60);
+    font: 13pt Arial;
+    margin-top: 2px;
+}

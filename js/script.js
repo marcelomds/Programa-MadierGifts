@@ -5,12 +5,16 @@ limparCampos = () => {
     document.getElementById('inAltura').value = '';
     document.getElementById('outValor').value = '';
     outValor.innerHTML = '';
+    
+    //falta limpar o checkbox
+    //document.getElementById('qtdCaixas').disabled = false;
+
     let select = document.getElementById('inTipocx').value = '';
     // Posiciona o cursor no campo 'Largura'
     document.getElementById('inLargura').focus();
 }
 
-$('#btCalcular').click(function () {
+calcularCaixa = () => {
     //Receber as medidas da caixa
     let inLargura = document.getElementById('inLargura');
     let inComprimento = document.getElementById('inComprimento');
@@ -21,6 +25,7 @@ $('#btCalcular').click(function () {
     let comprimento = Number(inComprimento.value);
     let altura = Number(inAltura.value);
     let outValor = document.getElementById('outValor');
+
 
     // Verificar se o campo largura é vazio (0) ou NaN;
     if (largura == 0 || isNaN(largura)) {
@@ -42,8 +47,8 @@ $('#btCalcular').click(function () {
         inAltura.value = '';
         inAltura.focus();
         return;
-    }
 
+    }
     let opcaoCaixa = $('#inTipocx :checked').val();
 
     if (opcaoCaixa == '') {
@@ -64,8 +69,22 @@ $('#btCalcular').click(function () {
     if (opcaoCaixa == 'cx5') {
         outValor.innerHTML = ('TODA ACRÍLICO');
     }
-})
 
+}
+    //Aqui será feita a função de adicionar quantidades de caixas e calcular o valor total com todas
+    $('input[name="addCx"]').change(function() {
+        if ($('input[name="addCx"]:checked').val() === "addQtd") {
+            $('#totalCaixas').prop("disabled", false);
+        } else {
+            $('#totalCaixas').prop("disabled", true);
+        }
+    })
+
+
+
+
+// Cria referência ao elemento btCalcular e registra evento assossiado a calcular caixa
+let btCalcular = document.getElementById('btCalcular').addEventListener('click', (calcularCaixa))
 
 // Cria referência ao elemento btLimpar e registra evento assossiado a limpar campos
 let limpar = document.getElementById('btLimpar').addEventListener('click', (limparCampos))

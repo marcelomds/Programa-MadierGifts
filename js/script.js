@@ -71,12 +71,12 @@ calcularCaixa = () => {
     }
 
 }
-    //Aqui será feita a função de adicionar quantidades de caixas e calcular o valor total com todas
+    //Função de adicionar quantidades de caixas e calcular o valor total com todas
     $('input[name="addCx"]').change(function() {
         if ($('input[name="addCx"]:checked').val() === "addQtd") {
             $('#totalCaixas').prop("disabled", false);
         } else {
-            $('#totalCaixas').prop("disabled", true);
+            $('#totalCaixas').prop("disabled", true).val('');
         }
     })
 

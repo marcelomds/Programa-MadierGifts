@@ -64,7 +64,7 @@ calcularCaixa = () => {
         outValor.innerHTML = ('MADEIRA - TAMPA ACRÍLICO CURTA');
     }
     if (opcaoCaixa == 'cx4') {
-        outValor.innerHTML = (`Valor R$: ${(largura + comprimento + altura).toFixed(2).fontcolor('green')}`);
+        outValor.innerHTML = (`Valor R$: ${(largura + comprimento + altura).toFixed(2).replace('.', ',').fontcolor('green')}`);
     }
     if (opcaoCaixa == 'cx5') {
         outValor.innerHTML = ('TODA ACRÍLICO');

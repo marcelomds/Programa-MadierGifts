@@ -55,19 +55,23 @@ calcularCaixa = () => {
         alert('Por favor, escolha o tipo de caixa');
     }
     if (opcaoCaixa == 'cx1') {
-        outValor.innerHTML = ('BASE MADEIRA - TAMPA ACRÍLICO');
+        outValor.innerHTML = (`Valor R$: ${((largura + comprimento + altura)*2).toFixed(2).fontcolor('green')}`);
     }
     if (opcaoCaixa == 'cx2') {
-        outValor.innerHTML = ('CARTONAGEM');
+        outValor.innerHTML = (`Valor R$: ${(largura + comprimento).toFixed(2).fontcolor('green')}`);
     }
     if (opcaoCaixa == 'cx3') {
-        outValor.innerHTML = ('MADEIRA - TAMPA ACRÍLICO CURTA');
+        outValor.innerHTML = (`Valor R$: ${((largura + comprimento + altura)*2).toFixed(2).fontcolor('green')}`);
     }
     if (opcaoCaixa == 'cx4') {
+<<<<<<< HEAD
+        outValor.innerHTML = (`Valor R$: ${((largura + comprimento + altura)*2).toFixed(2).fontcolor('green')}`);
+=======
         outValor.innerHTML = (`Valor R$: ${(largura + comprimento + altura).toFixed(2).replace('.', ',').fontcolor('green')}`);
+>>>>>>> e0153bb77067d8a4c7892107cefd8784576d90f1
     }
     if (opcaoCaixa == 'cx5') {
-        outValor.innerHTML = ('TODA ACRÍLICO');
+        outValor.innerHTML = (`Valor R$: ${(largura + comprimento + altura).toFixed(2).fontcolor('green')}`);
     }
 
 }
@@ -79,8 +83,6 @@ calcularCaixa = () => {
             $('#totalCaixas').prop("disabled", true).val('');
         }
     })
-
-
 
 
 // Cria referência ao elemento btCalcular e registra evento assossiado a calcular caixa
